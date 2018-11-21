@@ -1,28 +1,16 @@
-int pin = 1;
+#include <Morse.h>
+
+Morse morse (1);
 
 void setup() {
-  pinMode(pin, OUTPUT);
-
-}
+ }
 
 void loop() {
- dot(); dot(); dot();
- dash(); dash(); dash();
- dot(); dot(); dot();
+ morse.dot(); morse.dot(); morse.dot();
+ morse.dash(); morse.dash(); morse.dash();
+ morse.dot(); morse.dot(); morse.dot();
  delay(3000);
 }
 
-void dot(){
-  digitalWrite(pin, HIGH);
-  delay(250);
-  digitalWrite(pin, LOW);
-  delay(250);
-}
 
-void dash(){
-  digitalWrite(pin, HIGH);
-  delay(1000);
-  digitalWrite(pin, LOW);
-  delay(250);
-}
 
